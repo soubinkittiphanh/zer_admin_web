@@ -380,7 +380,7 @@ font-family: 'DM Sans';
 export const hostName = () => {
   // Create a new Date object with the same year and month as the input date, but with day set to 1
   // const baseURL = 'http://localhost:8888' // ***LOCAL UAT*** 
-  // const baseURL = 'http://192.168.8.112:8888' // ***LOCAL UAT*** 
+  // const baseURL = 'http://192.168.1.5:8888' // ***LOCAL UAT*** 
   // const baseURL = 'http://192.168.1.8:8888' // ***LOCAL UAT*** 
   // const baseURL = 'http://150.95.31.23:8003' // ***PRODUCTION CHITHANH*** 
   // const baseURL = 'http://150.95.31.23:8006' // ***PRODUCTION laofriend*** 
@@ -390,7 +390,8 @@ export const hostName = () => {
   // const baseURL = 'http://150.95.31.23:8010' // ***PRODUCTION PEEAIR2024*** 
   // const baseURL = 'http://150.95.31.23:8011' // ***PRODUCTION Little boutique2024*** 
   // const baseURL = 'http://150.95.31.23:8013' // ***PRODUCTION Tonoo*** 
-  const baseURL = 'http://150.95.31.23:8101' // ***PRODUCTION Woody*** 
+  const baseURL = 'http://150.95.31.23:8102' // ***PRODUCTION ZER JOHUD*** 
+  // const baseURL = 'http://150.95.31.23:8101' // ***PRODUCTION Woody*** 
   // const baseURL = 'http://150.95.31.23:8004' // ***ONLINE UAT*** 
   // return baseURL;
   // let baseURL = `http://150.95.31.23:${process.env.API_PORT}`;
@@ -517,7 +518,7 @@ export const confirmSwal = (swal, message, callbackFunc) => {
     title: 'ກະລຸນາຢືນຢັນ',
     text: message,
     confirmButtonText: 'ຢືນຢັນ',
-    confirmButtonColor: '#01532B',
+    confirmButtonColor: '#b48811',
     showCancelButton: true,
     cancelButtonText: 'ອອກ',
     cancelButtonColor: '#D00505',

@@ -399,13 +399,13 @@ export const actions = {
     },
     async initiateData(state, axios) {
         initTerminal(state, axios);
-        initLocation(state, axios);
-        initProduct(state, axios);
-        initClient(state, axios);
+        // initLocation(state, axios);
+        // initProduct(state, axios);
+        // initClient(state, axios);
         initCurrency(state, axios);
-        initPayment(state, axios);
-        initUnit(state, axios);
-        initCompanyData(state, axios);
+        // initPayment(state, axios);
+        // initUnit(state, axios);
+        // initCompanyData(state, axios);
     }
 
 }

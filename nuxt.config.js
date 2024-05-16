@@ -98,22 +98,28 @@ export default {
           // required: true,
           // type: 'Bearer'
         },
+        refreshToken: {
+          property: 'refreshToken',
+          data: 'refreshToken',
+          maxAge: 60 * 60 * 24 * 30
+        },
         user: {
           property: 'user',
           // autoFetch: true
         },
         endpoints: {
           login: { url: 'userLogin', method: 'post' },
+          refresh: { url: '/api/auth/refresh', method: 'post' },
           logout: { url: 'logout', method: 'get' },
           user: { url: 'me', method: 'get' },
         }
       }
     },
     redirect: {
-      login: '/admin/login',
+      login: '/backend',
       logout: false,
-      callback: '/admin/login',
-      home: '/admin/login',
+      callback: '/bankend',
+      home: '/backend/home',
     }
   },
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -127,10 +133,15 @@ export default {
           // secondary: '#337555', 
           // lightprimary: '#80a995',
           // danger: '#D00505',
-          primary: '#EA9AB2', //Woody3 pink
-          secondary: '#E27396', 
-          lightprimary: '#FFDBE5',
-          danger: '#D00505',
+          // primary: '#EA9AB2', //Woody3 pink
+          // secondary: '#E27396', 
+          // lightprimary: '#FFDBE5',
+          // danger: '#D00505',
+
+          primary: '#b48811', //JOHUD
+          secondary: '#ebd197', 
+          lightprimary: '#a2790d',
+          danger: '#bb9b49',
         },
         // dark: {
         //   primary: '#01532B',

@@ -112,16 +112,6 @@ export default {
         if (response.data.accessToken) {
           console.log(`LOGIN COMPLETED`);
           this.initiateData(this.$axios)
-          // this.$axios.get('api/terminal/find')
-          //   .then((res) => {
-          //     for (const iterator of res.data) {
-          //       console.log(`DATA TERMINAL ${iterator['name']}`);
-          //     }
-
-          //   })
-          //   .catch((er) => {
-          //     console.error('Terminal initiate fail ' + er)
-          //   })
           this.terminalDialog = true
         } else {
           console.log('No token')

@@ -451,7 +451,7 @@ export default {
     //******** Check if all common variable is ready ******** */
     // this.intervalId = setInterval(this.checkAllInitData, 1000);
     //******** Listen for browser reload ******** */
-    this.loadMenu()
+    // this.loadMenu()
     window.addEventListener('beforeunload', this.checkAllInitData);
   },
   beforeDestroy() {
@@ -469,12 +469,12 @@ export default {
     },
   },
   methods: {
-    isGranted(code) {
-      const grantedCodes = this.user.userGroup.authorities.map(el => el.code)
-      console.log(`Grand code len: ${grantedCodes.length}`);
-      if (grantedCodes.includes(code)) return true
-      return false
-    },
+    // isGranted(code) {
+    //   const grantedCodes = this.user.userGroup.authorities.map(el => el.code)
+    //   console.log(`Grand code len: ${grantedCodes.length}`);
+    //   if (grantedCodes.includes(code)) return true
+    //   return false
+    // },
 
     clearInterval() {
       clearInterval(this.intervalId);
@@ -492,11 +492,11 @@ export default {
       }
       // }, 1000);
     },
-    async loadMenu() {
-      console.log(`===> Loadin user menu`);
-      const response = await this.$axios.get(`api/group/find/${this.user.userGroup.id}`)
-      this.myMenu = response.data['menuHeaders']
-    },
+    // async loadMenu() {
+    //   console.log(`===> Loadin user menu`);
+    //   const response = await this.$axios.get(`api/group/find/${this.user.userGroup.id}`)
+    //   this.myMenu = response.data['menuHeaders']
+    // },
     switchTerminal() {
       this.setSelectedTerminal(this.terminalSelected)
       const location = this.findAllLocation.find(el => el.id == this.findAllTerminal.find(el => el.id == this.terminalSelected)['locationId'])
