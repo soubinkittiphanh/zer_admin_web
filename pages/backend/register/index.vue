@@ -74,6 +74,7 @@ export default {
 
   },
   methods: {
+
     async deleteAccount(account) {
       this.update = true
       this.accountInfo.id = account.id

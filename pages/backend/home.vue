@@ -51,6 +51,13 @@
             <img :src="passwordSvg" height="80" style="text-align: center" />
           </v-card-text>
         </v-card>
+        <v-card class="ma-1 custom-card" @click="logoff">
+          <v-card-text style="color: white; text-align: center">
+            ອອກຈາກລະບົບ
+            <br />
+            <img :src="logoffSvg" height="80" style="text-align: center" />
+          </v-card-text>
+        </v-card>
       </v-row>
     </div>
     <!-- Bottom navigation bar -->
@@ -75,6 +82,7 @@ export default {
       unreadSvg: require('~/assets/icons/usergradient/admin/unreadIB.svg'),
       findSvg: require('~/assets/icons/usergradient/admin/find.svg'),
       passwordSvg: require('~/assets/icons/usergradient/password.svg'),
+      logoffSvg: require('~/assets/icons/usergradient/logoff.svg'),
       activeTab: null,
       isLoading: false,
       topupForm: false,
@@ -95,6 +103,10 @@ export default {
   },
   computed: {},
   methods: {
+    async logoff() {
+      await this.$auth.logout()
+      this.$router.push('/backend')
+    },
     startFetchingData() {
       // Fetch data immediately on component mount
       this.statementEntry()

@@ -9,7 +9,7 @@ export default function({app,redirect}){
     // }
 
     if (!app.$auth.loggedIn) {
-        return redirect('/member');
+        return redirect('/backend');
       }
     console.log("Iam a middleware");
 }

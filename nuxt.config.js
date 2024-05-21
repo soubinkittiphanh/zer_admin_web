@@ -110,7 +110,7 @@ export default {
         endpoints: {
           login: { url: 'userLogin', method: 'post' },
           refresh: { url: '/api/auth/refresh', method: 'post' },
-          logout: { url: 'logout', method: 'get' },
+          logout: { url: '/api/logout', method: 'get' },
           user: { url: 'me', method: 'get' },
         }
       }
@@ -118,7 +118,7 @@ export default {
     redirect: {
       login: '/backend',
       logout: false,
-      callback: '/bankend',
+      callback: '/backend',
       home: '/backend/home',
     }
   },
